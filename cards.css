@@ -1,0 +1,54 @@
+#container{
+    display: flex;
+}
+.cards{
+    color: white;
+    background-color: black;
+    margin: 20px;
+    text-align: center;
+    width: 33%;
+    height: 500px;
+}
+#first-card{
+    float:left;
+    margin-right: 10px;
+}
+#second-card{
+    float:left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#third-card{
+    float:left;
+    overflow-y:scroll;
+    margin-left: 10px;
+}
+#second-card:hover{
+    animation: example 1s linear infinite;
+    background-color: blue;
+    content-visibility: hidden;
+}
+@keyframes example{
+    0%{
+        transform: rotateX(0deg);
+       }
+    100%{
+        transform: rotateX(360deg);
+       }
+}
+
+#third-card:hover{ 
+    animation: example-2 1s;
+    background-color:red;
+    animation-iteration-count:1px;    
+}
+@keyframes example-2{
+    0%{
+        transform: rotateY(0deg);
+       }
+    100%{
+        transform: rotateY(180deg);
+       }
+    from{content-visibility: visible;} 
+    to{content-visibility: hidden;}
+}
